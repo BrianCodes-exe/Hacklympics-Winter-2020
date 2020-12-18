@@ -27,6 +27,7 @@
       }
       input
       {
+        
         padding:0;
         border:3px white solid;
         background:none;
@@ -41,7 +42,7 @@
         border:none;
         background:none;
       }
-      #TopLeft
+      #dashBoard
       {
         color:aliceblue;
         position: fixed;
@@ -49,7 +50,7 @@
         left: 20px;
         width: 600px;
       }
-      #TopRightR
+      #aboutButton
       {
           
           position:fixed;
@@ -57,14 +58,14 @@
           right:0px;
           width:280px;
       }
-      #TopRightL
+      #gitHubButton
       {
-        position:fixed;
+            position:fixed;
           top:10px;
           right:0px;
           width:150px;
       }
-      #centerPrompt
+      #inputWrapper
       {
           padding-top:23%;
           right:0px;
@@ -79,18 +80,18 @@
   </style>
 
   <body>
-    <div id = "TopLeft">
+    <div id = "dashBoard">
         <h2>Dashboard</h2>
     </div>
-    <div id = "TopRightR">
+    <div id = "aboutButton">
         <h2><button>ABOUT</button></h2>
     </div>
-    <div id = "TopRightL">
+    <div id = "gitHubButton">
         <h2><button>GITHUB</button></h2>
     </div>
-    <div id = "centerPrompt">
+    <div id = "inputWrapper">
       
-        <input type= "text" id = "mainInput" placeholder="Type /help for commands" >
+        <input id = "input" type= "text" id = "mainInput" placeholder=" Type /help for commands" >
         
     </div>
     <marquee behavior="scroll" direction="left">Stonks</marquee>

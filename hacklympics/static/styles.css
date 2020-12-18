@@ -1,10 +1,14 @@
-body
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+      body
       {
-          background-image: url(background.png);
+          font-family: 'Open Sans';
+          background-image: url("https://github.com/cerasamson/Hacklympics-Winter-2020/blob/main/hacklympics/images/background.png?raw=true");
           background-repeat: no-repeat;
           background-position:center;
           background-size: cover;
       }
+      
       input
       {
         
@@ -14,6 +18,7 @@ body
         border-radius:  2em;
         width:30%
       }
+
       button
       {
         color:aliceblue;
@@ -22,29 +27,39 @@ body
         border:none;
         background:none;
       }
+
       #dashBoard
-      {
+      {          
+        font-weight: 600;
         color:aliceblue;
         position: fixed;
         top: 10px;
         left: 20px;
         width: 600px;
       }
+
       #aboutButton
       {
-          
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
           position:fixed;
           top:10px;
           right:0px;
           width:280px;
       }
+      
       #gitHubButton
       {
-            position:fixed;
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
           top:10px;
           right:0px;
           width:150px;
       }
+
       #inputWrapper
       {
           padding-top:23%;

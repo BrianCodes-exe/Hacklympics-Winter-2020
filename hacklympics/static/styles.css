@@ -30,7 +30,7 @@ body
         left: 20px;
         width: 600px;
       }
-      #aboutButton
+      #about
       {
           
           position:fixed;
@@ -38,7 +38,7 @@ body
           right:0px;
           width:280px;
       }
-      #gitHubButton
+      #github
       {
             position:fixed;
           top:10px;

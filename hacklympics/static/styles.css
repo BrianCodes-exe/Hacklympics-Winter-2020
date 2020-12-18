@@ -10,8 +10,7 @@
       }
       
       input
-      {
-        
+      {  
         padding:0;
         border:3px white solid;
         background:none;
@@ -62,11 +61,18 @@
 
       #inputWrapper
       {
+          color: white;
           padding-top:23%;
           right:0px;
           padding-left:40%;
           bottom:0px;
       }
+
+      ::placeholder 
+      {
+        color: white;
+      }
+      
       
       marquee
       {

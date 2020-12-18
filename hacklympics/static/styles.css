@@ -58,7 +58,16 @@
           right:0px;
           width:150px;
       }
+      #headerInput
+      {
+          color:aliceblue;
 
+      }
+      #headerInput:hover
+      {
+          color:white;
+      }
+      
       #inputWrapper
       {
           color: white;

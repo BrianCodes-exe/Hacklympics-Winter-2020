@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+      body
+      {
+        overflow:hidden;
+          font-family: 'Open Sans';
+          background-image: url("https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/background.png?raw=true");
+          background-repeat: no-repeat;
+          background-position:center;
+          background-size: cover;
+      }
+      
+      input
+      {  
+        padding:0;
+        border:3px white solid;
+        background:none;
+        border-radius:  2em;
+        width:30%
+      }
+
+      button
+      {
+        color:aliceblue;
+        display: inline-block;
+        padding:0;
+        border:none;
+        background:none;
+      }
+
+
+      #dashBoard
+      {          
+        font-weight: 600;
+        color:aliceblue;
+        position: fixed;
+        top: 10px;
+        left: 20px;
+        width: 600px;
+      }
+
+      #about
+      {
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
+          top:10px;
+          right:0px;
+          width:280px;
+      }
+      
+      #github
+      {
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
+          top:10px;
+          right:0px;
+          width:150px;
+      }
+
+      .aboutButton
+      {
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
+          top:10px;
+          right:150px;
+          width:100px;
+          font-size: 20px;
+      }
+
+      .ghButton
+      {
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
+          top:10px;
+          right:50px;
+          width:100px;
+          font-size: 20px;
+      }
+
+      #headerInput
+      {
+          color:aliceblue;
+
+      }
+
+      #headerInput:hover
+      {
+          color:white;
+      }
+      
+      #inputWrapper
+      {
+          color: white;
+          padding-top:23%;
+          right:0px;
+          padding-left:40%;
+          bottom:0px;
+      }
+      #sleighSlide
+      {
+        position: absolute;
+        right:100%;
+        animation: slide 6s infinite;
+      }
+      @keyframes slide {
+        0% {right: 0%; }
+        35% {right: 30%; }
+        65% {right: 70%; }
+        100% {right: 90%; }
+
+      }
+      ::placeholder 
+      {
+        color: white;
+      }
+
+      #particles-js
+      {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        position: absolute;
+        background-size: cover;
+        background-position: 50% 50%;
+        z-index:-1;
+      }
+
+      * {
+        padding:0px;
+        margin:0px;
+      }
+      
+      /* Create three equal columns that floats next to each other */
+      .column {
+        background-color:aliceblue;
+        text-align:center;
+        border-radius: 25px;
+        float: left;
+        width: 21%;
+        margin-top: 8%;
+        margin-left:23px;
+        margin-right:23px;
+        height: 500px; 
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+    
+      .btn-default
+      {
+        background-color: transparent;
+        color:#FFF;
+        border-color: transparent;
+      }
+         
+        .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+        {
+          background-color: #2F3E48;
+          color:#FFF;
+          border-color: transparent;
+        }
+   /* The Popup (background) */
+    .Popup {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }

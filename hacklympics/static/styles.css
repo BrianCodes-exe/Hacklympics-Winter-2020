@@ -27,6 +27,7 @@
         background:none;
       }
 
+
       #dashBoard
       {          
         font-weight: 600;
@@ -69,6 +70,7 @@
           width:230px;
           font-size: 20px;
       }
+
       .ghButton
       {
           background-color: Transparent;
@@ -80,11 +82,13 @@
           width:100px;
           font-size: 20px;
       }
+
       #headerInput
       {
           color:aliceblue;
 
       }
+
       #headerInput:hover
       {
           color:white;
@@ -129,3 +133,16 @@
       }
       
     
+      .btn-default
+      {
+        background-color: transparent;
+        color:#FFF;
+        border-color: transparent;
+      }
+         
+        .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
+        {
+          background-color: #2F3E48;
+          color:#FFF;
+          border-color: transparent;
+        }

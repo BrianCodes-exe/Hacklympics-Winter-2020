@@ -60,11 +60,25 @@
       }
       .aboutButton
       {
-        font-size: 50em;
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
+          top:10px;
+          right:120px;
+          width:230px;
+          font-size: 20px;
       }
       .ghButton
       {
-        font-size: 50em;
+          background-color: Transparent;
+          background-repeat:no-repeat;
+          border: none;
+          position:fixed;
+          top:10px;
+          right:50px;
+          width:100px;
+          font-size: 20px;
       }
       #headerInput
       {

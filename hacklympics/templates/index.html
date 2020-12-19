@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="../static/styles/styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
@@ -21,6 +21,7 @@
   
   <body>
     <!-- Modal, this is temporary code that isn't being used but will be needed later for the to do list to show up-->
+    <!--
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -40,7 +41,8 @@
         </div>
       </div>
     </div>
-
+    -->
+    
     <div id="particles-js">
     </div>
 
@@ -55,9 +57,9 @@
     </div>
     <div id = "inputWrapper">
       <h1 id = "headerInput">welcome &#x2603</h1>
-      <form>
+      <form method="post">
         <div class="form-group">
-          <input id = "input" type= "text" id = "mainInput" placeholder="  type /help for commands" >
+          <input name="command" id = "input" type= "text" id = "mainInput" placeholder="  type /help for commands" >
           <button type="submit" class="btn btn-default"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
           </svg>
@@ -75,6 +77,7 @@
     <div id = "sleighSlide">
     <img src = "https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/sleighSlide.gif?raw=true">
     </div>
+    
     <!--Weather popup box-->
     <div id="myPopup" class="Popup">
         <div class="content">
@@ -82,7 +85,24 @@
             <p>Place info about weather here..</p>
         </div>
     </div>
+    <script>
+        var popup = document.getElementById("myPopup");
+        var span = document.getElementsByClassName("close")[0];
+        var command = "{{ command }}";
 
+        if (command == "/weather") {
+            popup.style.display = "block";
+        }
+        if (command == "no city") {
+            alert("Proper use of /weather command is:\n/weather <city-name>")
+        }
+        if (command == "error") {
+            alert("Enter in a valid command")
+        }
+        span.onclick = function() {
+            popup.style.display = "none";
+        }
+    </script>
     <!--Need these to be at the bottom, qQuery coming in first-->
     <!--For Bootstrap if its going to be useds-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -90,9 +110,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   
     <!--- Importing particle.js / app.js -->
-    <script src="../static/particles.js"></script>
-    <script src="../static/app.js"></script>
-    <script src="../static/api.js"></script>
+    <script src="../static/scripts/particles.js"></script>
+    <script src="../static/scripts/app.js"></script>
 
   </body>
 </html>

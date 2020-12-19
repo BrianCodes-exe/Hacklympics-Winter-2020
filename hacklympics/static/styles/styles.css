@@ -10,7 +10,6 @@
           background-image: url("https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/background.png?raw=true");
 >>>>>>> upstream/main:hacklympics/static/styles/styles.css
           background-repeat: no-repeat;
-          background-position:center;
           background-size: cover;
       }
       
@@ -64,7 +63,23 @@
           right:0px;
           width:150px;
       }
-
+      #weatherHeader
+      {
+        margin-left:35%;
+        margin-top:5%;
+      }
+      
+      #numDisplay
+      {
+        
+        font-weight:bold;
+        font-size: 250px;
+        text-align: center;
+        margin-right:60%;
+        background: -webkit-linear-gradient(#3B92D6, #73B2E3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
       .aboutButton
       {
           background-color: Transparent;

@@ -76,7 +76,20 @@
           padding-left:40%;
           bottom:0px;
       }
+      #sleighSlide
+      {
+        margin-bottom:60%;
+        position: absolute;
+        right:100%;
+        animation: slide 6s infinite;
+      }
+      @keyframes slide {
+        0% {right: -100%; }
+        35% {right: 0%; }
+        65% {right: 40%; }
+        100% {right: 90%; }
 
+      }
       ::placeholder 
       {
         color: white;
@@ -93,7 +106,4 @@
         z-index:-1;
       }
       
-      marquee
-      {
-          padding-top: 15%;
-      }
+    

@@ -2,8 +2,13 @@
 
       body
       {
+        overflow:hidden;
           font-family: 'Open Sans';
+<<<<<<< HEAD:hacklympics/static/styles.css
           background-image: url("https://github.com/cerasamson/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/background.png?raw=true");
+=======
+          background-image: url("https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/background.png?raw=true");
+>>>>>>> upstream/main:hacklympics/static/styles/styles.css
           background-repeat: no-repeat;
           background-position:center;
           background-size: cover;
@@ -59,6 +64,7 @@
           right:0px;
           width:150px;
       }
+
       .aboutButton
       {
           background-color: Transparent;
@@ -66,8 +72,8 @@
           border: none;
           position:fixed;
           top:10px;
-          right:120px;
-          width:230px;
+          right:150px;
+          width:100px;
           font-size: 20px;
       }
 
@@ -104,15 +110,14 @@
       }
       #sleighSlide
       {
-        margin-bottom:60%;
         position: absolute;
         right:100%;
         animation: slide 6s infinite;
       }
       @keyframes slide {
-        0% {right: -100%; }
-        35% {right: 0%; }
-        65% {right: 40%; }
+        0% {right: 0%; }
+        35% {right: 30%; }
+        65% {right: 70%; }
         100% {right: 90%; }
 
       }
@@ -130,6 +135,31 @@
         background-size: cover;
         background-position: 50% 50%;
         z-index:-1;
+      }
+
+      * {
+        padding:0px;
+        margin:0px;
+      }
+      
+      /* Create three equal columns that floats next to each other */
+      .column {
+        background-color:aliceblue;
+        text-align:center;
+        border-radius: 25px;
+        float: left;
+        width: 21%;
+        margin-top: 8%;
+        margin-left:23px;
+        margin-right:23px;
+        height: 500px; 
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
       }
       
     

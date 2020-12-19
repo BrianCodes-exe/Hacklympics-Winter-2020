@@ -81,7 +81,10 @@
     <div id="myPopup" class="Popup">
         <div class="content">
             <span class="close">&times;</span>
-            <h1>In City, it is currently</h1>
+            {% if showData %}
+            <h1>Test {{ forecast[0].date }} End</h1>
+            {% endif %}
+           <!-- <h1 style="font-size: 500px;">In {{ forecast[0].date }}, it is currently</h1> -->
         </div>
     </div>
     <script>

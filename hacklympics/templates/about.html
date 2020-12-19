@@ -22,55 +22,30 @@
 
 
   <body>
-    <!-- Modal, this is temporary code that isn't being used but will be needed later for the to do list to show up-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-    <div id="particles-js">
-    </div>
-
-    <div id = "dashBoard">
-        <h2>Dash</h2>
-    </div>
     <div id = "about">
-        <h2><button class = "aboutButton" onclick="window.location.href ='about.html';">ABOUT</button></h2>
+        <h2><button class = "aboutButton" onclick="window.location.href ='index.html';">HOME</button></h2>
     </div>
     <div id = "github">
         <h2><button class = "ghButton" onclick="window.location.href ='https://github.com/MateuszB-hub/Hacklympics-Winter-2020';">GITHUB</button></h2>
     </div>
-    
-    
-    <div id = "inputWrapper">
-      <h1 id = "headerInput">welcome &#x2603</h1>
-      <form>
-        <div class="form-group">
-          <input id = "input" type= "text" id = "mainInput" placeholder="  type /help for commands" >
-          <button type="submit" class="btn btn-default"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
-          </svg>
-          </button>
-
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+          <h2>Column 1</h2>
+          <p>Some text..</p>
         </div>
-      </form>
-    </div>
+        <div class="column" style="background-color:#bbb;">
+          <h2>Column 2</h2>
+          <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+          <h2>Column 3</h2>
+          <p>Some text..</p>
+        </div>
+        <div class="column" style="background-color:#ccc;">
+            <h2>Column 4</h2>
+            <p>Some text..</p>
+          </div>
+      </div>
     <!--<div>-->
       <!-- Button trigger modal -->
      <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
@@ -81,13 +56,7 @@
     <img src = "https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/sleighSlide.gif?raw=true">
     </div>
 
-    <!--Weather popup box-->
-    <div id="myPopup" class="Popup">
-        <div class="content">
-            <span class="close">&times;</span>
-            <p>Place info about weather here..</p>
-        </div>
-    </div>
+
 
     <!--Need these to be at the bottom, qQuery coming in first-->
     <!--For Bootstrap if its going to be useds-->

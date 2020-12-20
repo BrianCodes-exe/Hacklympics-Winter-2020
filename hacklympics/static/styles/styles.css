@@ -7,10 +7,12 @@
           background-image: url("https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/background.png?raw=true");
           background-repeat: no-repeat;
           background-size: cover;
+          font-size: 4vw;
+
       }
-      
+
       input
-      {  
+      {
         padding:0;
         border:3px white solid;
         background:none;
@@ -29,7 +31,7 @@
 
 
       #dashBoard
-      {          
+      {
         font-weight: 600;
         color:aliceblue;
         position: fixed;
@@ -48,7 +50,7 @@
           right:0px;
           width:280px;
       }
-      
+
       #github
       {
           background-color: Transparent;
@@ -62,26 +64,30 @@
       #weatherHeader
       {
         margin-left:35%;
-        margin-top:5%;
+        margin-top:0%;
       }
+
       #numDisplay
       {
         font-weight:bold;
-        font-size: 250px;
+        font-size:75px;
+        font-size: 4vw;
         text-align: center;
         margin-right:60%;
         background: -webkit-linear-gradient(#3B92D6, #73B2E3);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
       #leftWeather
       {
-        margin-left: 15%;
+
+        margin-left: 10%;
         float:left;
       }
       #rightWeather
       {
-        margin-right:10%;
+        margin-right:11%;
         float:right;
       }
       .summary
@@ -99,8 +105,8 @@
           right:150px;
           width:100px;
           font-size: 20px;
-          color:white;
       }
+
       .ghButton
       {
           background-color: Transparent;
@@ -111,8 +117,8 @@
           right:50px;
           width:100px;
           font-size: 20px;
-          color:white;
       }
+
       #usageLabel
       {
         font-size:75%;
@@ -128,7 +134,7 @@
       {
           color:white;
       }
-      
+
       #inputWrapper
       {
           color: white;
@@ -137,25 +143,25 @@
           padding-left:40%;
           bottom:0px;
       }
-      
+
       textarea:focus, input:focus{
         outline: none;
     }
-    
+
       #sleighSlide
       {
         position: absolute;
         right:100%;
-        animation: slide 6s infinite;
+        animation: slide 5s infinite;
       }
       @keyframes slide {
-        0% {right: 0%; }
-        35% {right: 30%; }
-        65% {right: 70%; }
-        100% {right: 90%; }
+        0% {right: -120%; }
+        15%{right: 0%;}
+        85% {right: 70%; }
+        100% {right: 110%; }
 
       }
-      ::placeholder 
+      ::placeholder
       {
         color: white;
       }
@@ -175,7 +181,7 @@
         padding:0px;
         margin:0px;
       }
-      
+
       /* Create three equal columns that floats next to each other */
       .column {
         background-color:aliceblue;
@@ -187,23 +193,24 @@
         margin-top: 8%;
         margin-left:23px;
         margin-right:23px;
-        height: 275px; 
+        height: 275px;
       }
-      
+
+      /* Clear floats after the columns */
       .row:after {
         content: "";
         display: table;
         clear: both;
       }
-      
-    
+
+
       .btn-default
       {
         background-color: transparent;
         color:#FFF;
         border-color: transparent;
       }
-         
+
         .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default
         {
           background-color: #2F3E48;
@@ -232,9 +239,8 @@
       padding: 20px;
       border: 1px solid #888;
       width: 80%;
-      padding-bottom:30px;
+      padding-bottom: 40px;
     }
-
     .contentW {
       background-color: #fefefe;
       margin: auto;
@@ -243,6 +249,7 @@
       width: 80%;
       padding-bottom:13%;
     }
+
     /* The Close Button */
     .close {
       color: #aaaaaa;

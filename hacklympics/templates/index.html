@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="../static/styles/styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+
     <title>Dash</title>
     <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/snowman_2603-fe0f.png">
+
   </head>
-  
+
   <body>
     <!-- Modal, this is temporary code that isn't being used but will be needed later for the to do list to show up-->
     <!--
@@ -42,14 +43,12 @@
     </div>
     -->
 
-    
     <div id="particles-js">
     </div>
 
     <div id = "dashBoard">
         <h2>Dash</h2>
     </div>
-    
     <div id = "about">
       <h2><button class = "aboutButton"><a href = "../static/htmls/about.html" style = "color:white;">ABOUT</a></button></h2>
       <!--<h2><button class = "aboutButton" onclick="window.location.href ='../../templates/index.html';">HOME</button></h2>-->
@@ -57,7 +56,6 @@
   <div id = "github">
     <h2><button class = "ghButton"><a href = "https://github.com/MateuszB-hub/Hacklympics-Winter-2020" style = "color:white;">GITHUB</a></button></h2>
   </div>
-
     <div id = "inputWrapper">
       <h1 id = "headerInput">welcome &#x2603</h1>
       <form method="post">
@@ -76,30 +74,30 @@
     <!--<div>-->
       <!-- Button trigger modal -->
      <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
-      <!-- Todo List--> 
+      <!-- Todo List-->
       <!--</button>-->
     <!--</div> -->
     <div id = "sleighSlide">
     <img src = "https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/sleighSlide.gif?raw=true">
     </div>
-    
+
     <!--Weather popup box-->
     <div id="weatherPopup" class="Popup">
         <div class="contentW">
             <span class="close">&times;</span>
             {% if forecast %}
-              <div id = "weatherHeader">
+              <div id = "weatherHeader" >
                 <h1>In {{ city }}, it is currently</h1>
                     <p id = "numDisplay"> {{ forecast.temperature }} &#176 F</p>
                 </div>
                 <!--Left side Data display-->
-                <div id = "leftWeather">
-                  <h2>Feels Like: {{ forecast.feels_like }} <br> Humidity: {{ forecast.humidity }} %<br> Air Pressure: {{ forecast.pressure }} atm</h2>
+                <div id = "leftWeather" >
+                  <h2>Feels Like: {{ forecast.feels_like }} &#176 F<br> Humidity: {{ forecast.humidity }} %<br> Air Pressure: {{ forecast.pressure }} atm</h2>
                   <h3>High : {{ forecast.temp_max }} &#176 F</h3>
                 </div>
                 <!-- Right side data display-->
-                <div id = "rightWeather">
-                  <h2>Sunset: {{ forecast.sunset }} <br> Sunrise: {{ forecast.sunrise }} <br> Wind Speed: {{ forecast.wind }}} m/s</h2>
+                <div id = "rightWeather" >
+                  <h2>Sunset: {{ forecast.sunset }} <br> Sunrise: {{ forecast.sunrise }} <br> Wind Speed: {{ forecast.wind }} m/s</h2>
                   <h3>Low : {{ forecast.temp_min }} &#176 F</h3>
                 </div>
             {% endif %}
@@ -109,10 +107,12 @@
     <div id="newsPopup" class="Popup">
         <div class="content">
             <span class="close">&times;</span>
-            {% if showData %}
-              <a href="{{ articles[0].url }}">{{ articles[0].title }}</a><br>
-              <img height="100" width="100" src="{{ articles[0].urlToImage }}" alt="Article image">
-              <p>{{ articles[0].description }}</p>
+            {% if articles %}
+              {% for i in [0,1,2,3,4] %}
+                <a href="{{ articles[i].url }}">{{ articles[i].title }}</a><br>
+                <img style="float: left;" height="80" width="80" src="{{ articles[i].urlToImage }}" alt="Article image">
+                <br><p>{{ articles[0].description }}</p>
+              {% endfor %}
             {% endif %}
         </div>
     </div>
@@ -133,10 +133,13 @@
             alert("The command you entered is invalid, please try again.")
         }
         if (command == "cityDNE") {
-            alert("The city you entered does not exist, please try again.")
+            alert("The location you entered: {{ city }} does not exist, please try again.")
         }
         if (command == "/news") {
             npopup.style.display = "block";
+        }
+        if (command == "None Found") {
+            alert("There were no news articles found that contained: {{ keyword }}")
         }
         span1.onclick = function() {
             wpopup.style.display = "none";
@@ -150,23 +153,21 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  
+
     <!--- Importing particle.js / app.js -->
     <script src="../static/scripts/particles.js"></script>
     <script src="../static/scripts/app.js"></script>
-    
-    <!-- import Tippy.js for tooltip/dropdown elements -->
+
+	 <!-- import Tippy.js for tooltip/dropdown elements -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-    
+
     <!-- Development -->
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
-
     <!-- Production -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-
     <script>
       // tooltip script
       tippy('#helpCommands', {

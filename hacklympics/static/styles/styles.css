@@ -87,7 +87,11 @@
         margin-right:10%;
         float:right;
       }
-
+      .summary
+      {
+        margin-left:7%;
+        margin-right:7%;
+      }
       .aboutButton
       {
           background-color: Transparent;

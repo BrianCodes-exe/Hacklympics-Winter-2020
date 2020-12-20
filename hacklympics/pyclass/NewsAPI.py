@@ -1,9 +1,10 @@
 from newsapi import NewsApiClient
+import config
 
 class NewsAPI:
 
 	def __init__(self, keyword=""):
-		self.newsapi = NewsApiClient(api_key='37b415e69ef6427587c5674531b84edf')
+		self.newsapi = NewsApiClient(api_key=NEWSAPI)
 		self.keyword = keyword
 		self.valid_sources = {}	
 		self.get_valid_sources()

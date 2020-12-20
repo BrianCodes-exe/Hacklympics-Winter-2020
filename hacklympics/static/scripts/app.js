@@ -1,5 +1,6 @@
 /* -----------------------------------------------
 /* How to use? : Check the GitHub README
+/* This file was brought in from Bootstrap
 /* ----------------------------------------------- */
 
 /* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */

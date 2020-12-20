@@ -64,10 +64,8 @@
         margin-left:35%;
         margin-top:5%;
       }
-      
       #numDisplay
       {
-        
         font-weight:bold;
         font-size: 250px;
         text-align: center;
@@ -76,7 +74,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
       #leftWeather
       {
         margin-left: 15%;
@@ -104,7 +101,6 @@
           font-size: 20px;
           color:white;
       }
-
       .ghButton
       {
           background-color: Transparent;
@@ -117,7 +113,6 @@
           font-size: 20px;
           color:white;
       }
-
       #usageLabel
       {
         font-size:75%;

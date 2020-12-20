@@ -87,7 +87,7 @@
         margin-right:10%;
         float:right;
       }
-      
+
       .aboutButton
       {
           background-color: Transparent;
@@ -112,6 +112,11 @@
           font-size: 20px;
       }
 
+      #usageLabel
+      {
+        font-size:75%;
+      }
+
       #headerInput
       {
           color:aliceblue;
@@ -131,6 +136,11 @@
           padding-left:40%;
           bottom:0px;
       }
+      
+      textarea:focus, input:focus{
+        outline: none;
+    }
+    
       #sleighSlide
       {
         position: absolute;

@@ -58,14 +58,16 @@
 
     <div id = "inputWrapper">
       <h1 id = "headerInput">welcome &#x2603</h1>
-      <button id="helpCommands">Help</button> 
       <form method="post">
         <div class="form-group">
-          <input name="command" id = "input" type= "text" id = "mainInput" placeholder="  type /help for commands" >
+          <input autocomplete="off" id="helpCommands" name="command" id = "input" type= "text" id = "mainInput" placeholder="  type in a command" >
           <button type="submit" class="btn btn-default"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
           </svg>
           </button>
+          <div id="usageLabel">
+            <p><b>example usage:</b> <i>/weather las vegas</i></p>
+          </div>
         </div>
       </form>
     </div>
@@ -164,7 +166,10 @@
     <script>
       // tooltip script
       tippy('#helpCommands', {
-        content: '/weather location \n /news keyword ',
+        content: '/weather <b>location</b> </br> /news <b>keyword</b>',
+        allowHTML: true,
+        placement: 'bottom-end',
+        trigger: 'click',
       });
     </script>
 

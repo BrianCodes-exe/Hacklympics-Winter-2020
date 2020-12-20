@@ -3,41 +3,180 @@
   <head>
 
     <!-- Front End Developers: Mateusz Bieda -->
-    <!-- Back End Developers: -->
+    <!-- Back End Developers: Brian Kim-->
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Test</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/styles/styles.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    
-  </head>
-  <body>
-    <div id = "dashBoard">
-        <h2>Dashboard</h2>
-    </div>
-    <div id = "aboutButton">
-        <h2><button>ABOUT</button></h2>
-    </div>
-    <div id = "gitHubButton">
-        <h2><button>GITHUB</button></h2>
-    </div>
-    <div id = "inputWrapper">
-      
-        <input id = "input" type= "text" id = "mainInput" placeholder=" Type /help for commands" >
-        
-    </div>
-    <marquee behavior="scroll" direction="left">Stonks</marquee>
 
+    <title>Dash</title>
+    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/snowman_2603-fe0f.png">
+
+  </head>
+
+  <body>
+    <!-- Modal, this is temporary code that isn't being used but will be needed later for the to do list to show up-->
+    <!--
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div id="particles-js">
+    </div>
+
+    <div id = "dashBoard">
+        <h2>Dash</h2>
+    </div>
+    <div id = "about">
+      <h2><button class = "aboutButton"><a href = "../static/htmls/about.html" style = "color:white;">ABOUT</a></button></h2>
+      <!--<h2><button class = "aboutButton" onclick="window.location.href ='../../templates/index.html';">HOME</button></h2>-->
+  </div>
+  <div id = "github">
+    <h2><button class = "ghButton"><a href = "https://github.com/MateuszB-hub/Hacklympics-Winter-2020" style = "color:white;">GITHUB</a></button></h2>
+  </div>
+    <div id = "inputWrapper">
+      <h1 id = "headerInput">welcome &#x2603</h1>
+      <form method="post">
+        <div class="form-group">
+          <input autocomplete="off" id="helpCommands" name="command" id = "input" type= "text" id = "mainInput" placeholder="type in a command" >
+          <button type="submit" class="btn btn-default"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm2.5 8.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+          </svg>
+          </button>
+          <div id="usageLabel">
+            <p><b>example usage:</b> <i>/weather las vegas</i></p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--<div>-->
+      <!-- Button trigger modal -->
+     <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+      <!-- Todo List-->
+      <!--</button>-->
+    <!--</div> -->
+    <div id = "sleighSlide">
+    <img src = "https://github.com/MateuszB-hub/Hacklympics-Winter-2020/blob/main/hacklympics/static/images/sleighSlide.gif?raw=true">
+    </div>
+
+    <!--Weather popup box-->
+    <div id="weatherPopup" class="Popup">
+        <div class="contentW">
+            <span class="close">&times;</span>
+            {% if forecast %}
+              <div id = "weatherHeader" >
+                <h1>In {{ city }}, it is currently</h1>
+                    <p id = "numDisplay"> {{ forecast.temperature }} &#176 F</p>
+                </div>
+                <!--Left side Data display-->
+                <div id = "leftWeather" >
+                  <h2>Feels Like: {{ forecast.feels_like }} &#176 F<br> Humidity: {{ forecast.humidity }} %<br> Air Pressure: {{ forecast.pressure }} atm</h2>
+                  <h3>High : {{ forecast.temp_max }} &#176 F</h3>
+                </div>
+                <!-- Right side data display-->
+                <div id = "rightWeather" >
+                  <h2>Sunset: {{ forecast.sunset }} <br> Sunrise: {{ forecast.sunrise }} <br> Wind Speed: {{ forecast.wind }} m/s</h2>
+                  <h3>Low : {{ forecast.temp_min }} &#176 F</h3>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <!--News popup box-->
+    <div id="newsPopup" class="Popup">
+        <div class="content">
+            <span class="close">&times;</span>
+            {% if articles %}
+              {% for i in [0,1,2,3,4] %}
+                <a href="{{ articles[i].url }}">{{ articles[i].title }}</a><br>
+                <img style="float: left;" height="80" width="80" src="{{ articles[i].urlToImage }}" alt="Article image">
+                <br><p>{{ articles[0].description }}</p>
+              {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <script>
+        var wpopup = document.getElementById("weatherPopup");
+        var npopup = document.getElementById("newsPopup");
+        var span1 = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementsByClassName("close")[1];
+        var command = "{{ command }}";
+
+        if (command == "/weather") {
+            wpopup.style.display = "block";
+        }
+        if (command == "no city") {
+            alert("Proper use of /weather command is:\n/weather <city-name>")
+        }
+        if (command == "error") {
+            alert("The command you entered is invalid, please try again.")
+        }
+        if (command == "cityDNE") {
+            alert("The location you entered: {{ city }} does not exist, please try again.")
+        }
+        if (command == "/news") {
+            npopup.style.display = "block";
+        }
+        if (command == "None Found") {
+            alert("There were no news articles found that contained: {{ keyword }}")
+        }
+        span1.onclick = function() {
+            wpopup.style.display = "none";
+        }
+        span2.onclick = function() {
+            npopup.style.display = "none";
+        }
+    </script>
     <!--Need these to be at the bottom, qQuery coming in first-->
     <!--For Bootstrap if its going to be useds-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--- Importing particle.js / app.js -->
+    <script src="../static/scripts/particles.js"></script>
+    <script src="../static/scripts/app.js"></script>
+
+	 <!-- import Tippy.js for tooltip/dropdown elements -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+    <!-- Development -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <!-- Production -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      // tooltip script
+      tippy('#helpCommands', {
+        content: '/weather <b>location</b> </br> /news <b>keyword</b>',
+        allowHTML: true,
+        placement: 'bottom-end',
+        trigger: 'click',
+      });
+    </script>
+
   </body>
 </html>

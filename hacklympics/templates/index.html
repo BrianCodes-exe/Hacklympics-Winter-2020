@@ -80,31 +80,63 @@
     </div>
     
     <!--Weather popup box-->
-    <div id="myPopup" class="Popup">
+    <div id="weatherPopup" class="Popup">
+        <div class="content">
+            <span class="close">&times;</span>
+            <div id = "weatherHeader">
+              <h1>In (City), it is currently</h1>
+                  <p id = "numDisplay">19</p>
+              </div>
+              <!--Left side Data display-->
+              <div id = "leftWeather">
+                <h2>Feels Like: (Filler) <br> Humidity: (Filler) <br> Air Pressure: (Filler) </h2>
+                <h3>High : (Up Arrow Symbol or Down Arrow)</h3>
+              </div>
+              <!-- Right side data display-->
+              <div id = "rightWeather">
+                <h2>Sunset: (Filler) <br> Sunrise: (Filler) <br> Wind Direction: (Filler) </h2>
+                <h3>Low : (Up Arrow Symbol or Down Arrow)</h3>
+              </div>
+        </div>
+    </div>
+    <!--News popup box-->
+    <div id="newsPopup" class="Popup">
         <div class="content">
             <span class="close">&times;</span>
             {% if showData %}
-            <h1>Test {{ forecast[0].date }} End</h1>
+              <a href="{{ articles[0].url }}">{{ articles[0].title }}</a><br>
+              <img height="100" width="100" src="{{ articles[0].urlToImage }}" alt="Article image">
+              <p>{{ articles[0].description }}</p>
             {% endif %}
-           <!-- <h1 style="font-size: 500px;">In {{ forecast[0].date }}, it is currently</h1> -->
         </div>
     </div>
     <script>
-        var popup = document.getElementById("myPopup");
-        var span = document.getElementsByClassName("close")[0];
+        var wpopup = document.getElementById("weatherPopup");
+        var npopup = document.getElementById("newsPopup");
+        var span1 = document.getElementsByClassName("close")[0];
+        var span2 = document.getElementsByClassName("close")[1];
         var command = "{{ command }}";
 
         if (command == "/weather") {
-            popup.style.display = "block";
+            wpopup.style.display = "block";
         }
         if (command == "no city") {
             alert("Proper use of /weather command is:\n/weather <city-name>")
         }
         if (command == "error") {
-            alert("Enter in a valid command")
+            alert("The command you entered is invalid, please try again.")
         }
-        span.onclick = function() {
-            popup.style.display = "none";
+        if (command == "cityDNE") {
+            alert("The city you entered does not exist, please try again.")
+        }
+        if (command == "/news") {
+            npopup.style.display = "block";
+        }
+        span1.onclick = function() {
+            wpopup.style.display = "none";
+        }
+        span2.onclick = function() {
+            npopup.style.display = "none";
         }
     </script>
     <!--Need these to be at the bottom, qQuery coming in first-->

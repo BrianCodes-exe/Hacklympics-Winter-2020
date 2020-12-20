@@ -76,6 +76,18 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+
+      #leftWeather
+      {
+        margin-left: 15%;
+        float:left;
+      }
+      #rightWeather
+      {
+        margin-right:10%;
+        float:right;
+      }
+      
       .aboutButton
       {
           background-color: Transparent;

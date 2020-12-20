@@ -1,10 +1,11 @@
 from pyowm import OWM
 import datetime
+import config
 
 class WeatherAPI:
 	def __init__(self, city):
 		self.city = city
-		self.owm = OWM("1ec584803deffede068b569491d027ef")
+		self.owm = OWM(WEATHERAPI)
 		self.mgr = self.owm.weather_manager()
 		self.observation = self.mgr.weather_at_place(city)
 		self.data = self.observation.weather

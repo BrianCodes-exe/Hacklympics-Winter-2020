@@ -18,14 +18,11 @@ def getCommand():
 		if ' ' in user_input:
 			command = '/weather'
 			city = user_input[9:]
-			try:
-				wapi = WeatherAPI(city)
-				forecast = wapi.get_forecast()
-				showData = True
-				return render_template('index.html', command=command, forecast=forecast, showData=showData)
-			except:
-				command='cityDNE'
-				return render_template('index.html', command=command)
+	
+			wapi = WeatherAPI(city)
+			forecast = wapi.get_forecast()
+			return render_template('index.html', command=command, forecast=forecast, city=city.title())
+		
 		elif user_input == '/weather':
 			command = 'no city'
 			return render_template('index.html', command=command)

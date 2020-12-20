@@ -102,6 +102,7 @@
           right:150px;
           width:100px;
           font-size: 20px;
+          color:white;
       }
 
       .ghButton
@@ -114,6 +115,7 @@
           right:50px;
           width:100px;
           font-size: 20px;
+          color:white;
       }
 
       #usageLabel

@@ -3,7 +3,7 @@ from newsapi import NewsApiClient
 class NewsAPI:
 
 	def __init__(self, keyword=""):
-		self.newsapi = NewsApiClient(api_key='6f4ee7fd8cc84d55b2d6656faa6f70a4')
+		self.newsapi = NewsApiClient(api_key='37b415e69ef6427587c5674531b84edf')
 		self.keyword = keyword
 		self.valid_sources = {}	
 		self.get_valid_sources()

@@ -61,7 +61,7 @@
       }
       #weatherHeader
       {
-        margin-left:40%;
+        margin-left:35%;
         margin-top:5%;
       }
       
@@ -71,21 +71,10 @@
         font-weight:bold;
         font-size: 250px;
         text-align: center;
-        padding-right: 65%;
+        margin-right:60%;
         background: -webkit-linear-gradient(#3B92D6, #73B2E3);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
-
-      #leftWeather
-      {
-        margin-left: 15%;
-        float:left;
-      }
-      #rightWeather
-      {
-        margin-right:15%;
-        float:right;
       }
       .aboutButton
       {
